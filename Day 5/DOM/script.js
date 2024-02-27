@@ -1,29 +1,29 @@
 //Get element by ID
-//var headingElement = document.getElementById("heading");
-//console.log(headingElement);
+var headingElement = document.getElementById("heading");
+console.log(headingElement);
 
 //get elements by class name
-//var textElements = document.getElementsByClassName("text")[0];
-//console.log(textElements);
+var textElements = document.getElementsByClassName("text")[0];
+console.log(textElements);
 
 //Get element by tag name
-//var listItems = document.getElementsByTagName("li");
-//console.log(listItems);
+var listItems = document.getElementsByTagName("li");
+console.log(listItems);
 
 //get elements by query selector
-//let container = document.querySelector("#container");
-//console.log(container);
+let container = document.querySelector("#container");
+console.log(container);
 
 //get elements by parent node
-//var listparent = document.getElementById("list").parentNode;
-//console.log(listparent);
+var listparent = document.getElementById("list").parentNode;
+console.log(listparent);
 
 //get elements by children node
-//var containerChildren = document.getElementById('container').children;
-//console.log(containerChildren);
+var containerChildren = document.getElementById('container').children;
+console.log(containerChildren);
 
-//var containerChildrenNodes = document.getEelementById('container').childNodes;
-//console.log(containerChildrenNodes);
+var containerChildrenNodes = document.getEelementById('container').childNodes;
+console.log(containerChildrenNodes);
 
 //modifying inner HTML
 headingElement.innerHTML = "Updated Content";
