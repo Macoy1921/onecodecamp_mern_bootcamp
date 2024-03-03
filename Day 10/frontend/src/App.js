@@ -1,5 +1,5 @@
 
-import React from 'react';
+/*import React from 'react';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
 //import ToDoList from './components/ToDoList';
@@ -28,8 +28,23 @@ const App = () => {
   )
 }
 
-export default App;
+export default App;*/
 
+// src/App.js
+import React from 'react';
+import JokeComponent from './JokeComponent';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <JokeComponent />
+      </header>
+    </div>
+  );
+}
+
+export default App;
 
 
   

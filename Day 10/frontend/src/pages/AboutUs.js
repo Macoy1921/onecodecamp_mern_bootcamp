@@ -1,17 +1,43 @@
-import React from 'react';
-import { Container, Card } from 'react-bootstrap';
+import React, { useState, useEffect} from 'react';
+import axios from 'axios';
 
 const AboutUs = () => {
-    return (
-        <Container className="mt-4">
-            <Card style={{ backgroundColor: 'lightblue'  }}>
-                <Card.Body>
-                    <Card.Title>About Us</Card.Title>
-                    <Card.Text>An online coffee shop.</Card.Text>
-                </Card.Body>
-            </Card>
-        </Container>
-    );
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('https://www.boredapi.com/api/activity');
+
+        const result = response.data;
+        setData(result);
+      } catch (error) {
+        setError(error.message);
+      } finally {
+        setLoading(false);
+      }
+
+    };
+
+    fetchData();
+  }, [])
+
+  return (
+    <div>
+      {loading && <p>Loading...</p>}
+      {error && <p>Error: {error}</p>}
+
+      {!loading && !error && (
+        <div>
+          <p>Activity: {data?.activity}</p>
+          <p>Type: {data?.type}</p>
+        </div>
+
+      )}
+    </div>
+  )
 }
 
 export default AboutUs;
