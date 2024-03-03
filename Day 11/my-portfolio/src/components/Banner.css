@@ -1,0 +1,17 @@
+/* Banner.css */
+.banner-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .banner-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px; /* Adjust based on your design */
+    margin-right: 20px; /* Adjust the margin as needed */
+  }
+  
+  .banner-content {
+    padding-left: 20px; /* Adjust the padding as needed */
+  }
+  
